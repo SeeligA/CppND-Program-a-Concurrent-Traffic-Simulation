@@ -75,6 +75,7 @@ void TrafficLight::cycleThroughPhases()
     
     std::chrono::time_point<std::chrono::system_clock> lastUpdate;
     lastUpdate = std::chrono::system_clock::now();
+    std::srand(std::time(0));
     auto cycleDuration = (std::rand() % 3000) + 4000; // m/s
 
     while(true) {
